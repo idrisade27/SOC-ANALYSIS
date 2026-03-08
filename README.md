@@ -86,7 +86,35 @@ Wireshark analysis revealed patterns consistent with DNS beaconing. Indicators I
   After identifying malicious activity, pfSense firewall rules were implemented to mitigate thet threats.
  **Actions taken:**
   - Geo-blocking for high-risk region in my context was Russia
-  - 
+  - Blocking inbound and outbound traffic
+  - Additional  monitoring through Snort IDS
+
+ **Note: When pfSense is deployed, the operating system IP address may change due to firewall configuration**
+
+**Geo-IP Blocking**
+Threat intelligence indicated significant attack activity originating from Russia. Firewall rules were created to: 
+- Block inbound connections from Russia
+- Block outbound traffic to Russia.
+  **Testing was performed by attempting to access "yandex.ru (A russia site)"**
+  The request was successfully blocked by the firewall.
+  **Screenshot**
+  ![pfblocker inbound and outbound](pfblocker_both.png)
+  ![Russia testing](russia_blocking.png)
+
+  ## PHASE 3: INTRUSION DETECTION WITH SNORT
+  Snort was deployed on pfsense to detect and prevent netwrok attacks. Detected activity included:
+  - SSH brute-force attempts on port 22
+  - Source IP identified as: "192.168.1.101"
+  - Real-time alerts triggered by Snort rules.
+  - Other additional rules were enabled such as Trojan, Ddos patterns, DNS attacks etc.
+ 
+  **Screenshot**
+  ![Snort Alert](
+
+  
+
+
+ 
   
 
 
