@@ -60,6 +60,7 @@ This project stimulates a cyber attack scenerio and demonstrates detection and p
 ![http_beaconing](http.png)
 
 **DNS BEACONING DETECTION**
+
 Wireshark analysis revealed patterns consistent with DNS beaconing. Indicators Included:
  - DNS queries occuring with milliseconds
  - Alternating source and destination IP addresses
@@ -72,6 +73,7 @@ Wireshark analysis revealed patterns consistent with DNS beaconing. Indicators I
 ![DNS_BEACONNG](dns.png)
 
 **BRUTEFORCE ATTACK**
+
  A bruteforce attack targeting SSH services was detected. Indicators included:
 - Client indentified as Medusa brute force tool
 - High volume of SSH login attempts
@@ -83,6 +85,7 @@ Wireshark analysis revealed patterns consistent with DNS beaconing. Indicators I
   ![Brute_force](ssh.png)
 
   ## PHASE 2: FIREWALL PROTECTION WITH PFSENSE
+
   After identifying malicious activity, pfSense firewall rules were implemented to mitigate thet threats.
  **Actions taken:**
   - Geo-blocking for high-risk region in my context was Russia
