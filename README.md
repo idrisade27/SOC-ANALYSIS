@@ -109,19 +109,20 @@ Threat intelligence indicated significant attack activity originating from Russi
   - Other additional rules were enabled such as Trojan, Ddos patterns, DNS attacks etc.
  
   **Screenshot**
-  ![Snort Alert](
+  ![Snort Alert](snort_alerts.png)
+  ![Snort rules](snort_rules.png)
 
-  
+## PHASE 4: Centralized Monitoring with Wazuh SIEM
+Wazuh was used to collect logs from pfSense and provide centralized monitoring.
+**Key Capabilities:**
+-Log collection from pfSense
+-Detection of security events
+-Analysis of Snort alerts
+-Incident monitoring through the Wazuh dashboard
+**The logs included:**
+- Decoder name (Snort)
+- pfSense event logs
+- Network security alerts.
 
-
- 
-  
-
-
-
-
- 
-
-  
-
-- 
+  **Screenshots**
+  ![pfSense_wazuh_connection](pfsense_wazuh.png)
